@@ -56,4 +56,12 @@ var menuLinks = [
   //added new elements to index.html and style.css
 
   //Part Three: Adding the Submenu
-  
+
+  //Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
+  let subMenuEl = document.querySelector('#sub-menu');
+
+  //Set the height subMenuEl element to be "100%".
+  subMenuEl.style.height = '100%';
+//   console.log(subMenuEl);
+
+
