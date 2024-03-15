@@ -74,6 +74,7 @@ var menuLinks = [
   //copied code over from previous lab
   //added new elements to index.html and style.css
 
+
 //Part Three: Adding the Submenu
 
 //Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
@@ -97,6 +98,7 @@ subMenuEl.style.position = 'absolute';
 //Set the CSS top property of subMenuEl to the value of 0.
 subMenuEl.style.top = "0";
 
+
 //Part Four: Adding Menu Interaction
 
   //Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
@@ -114,4 +116,14 @@ if (evt.target === topMenuEl){
 } else {
     console.log(evt.target);
 }
+//The event listener should add the active class to the <a> element that was clicked, 
+//unless it was already active, in which case it should remove it.
+evt.target.classList.toggle('active');
+//The event listener should remove the active class from each other <a> element in topMenuLinks - whether the active class exists or not.
+topMenuLinks.forEach(links => {
+    if (links !== evt.target){
+        links.classList.remove('active');
+    }
 })
+});
+
