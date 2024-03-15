@@ -55,13 +55,25 @@ var menuLinks = [
   //copied code over from previous lab
   //added new elements to index.html and style.css
 
-  //Part Three: Adding the Submenu
+//Part Three: Adding the Submenu
 
-  //Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
-  let subMenuEl = document.querySelector('#sub-menu');
+//Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
+let subMenuEl = document.querySelector('#sub-menu');
 
   //Set the height subMenuEl element to be "100%".
-  subMenuEl.style.height = '100%';
+subMenuEl.style.height = '100%';
 //   console.log(subMenuEl);
 
+//Set the background color of subMenuEl to the value stored in the --sub-menu-bg CSS custom property.
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
+// console.log(subMenuEl);
 
+//Add the class of flex-around to the subMenuEl element.
+subMenuEl.classList = 'flex-around';
+
+//Now, change the position of the submenu to temporarily hide it. Later, we will make the submenu appear dynamically based on user interaction:
+//Set the CSS position property of subMenuEl to the value of absolute.
+subMenuEl.style.position = 'absolute';
+
+//Set the CSS top property of subMenuEl to the value of 0.
+subMenuEl.style.top = "0";
