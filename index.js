@@ -50,4 +50,10 @@ var menuLinks = [
   })
 
   //Dom Manipulation Lab Part Two
+
+//Parts One and Two:
+  //copied code over from previous lab
+  //added new elements to index.html and style.css
+
+  //Part Three: Adding the Submenu
   
