@@ -29,11 +29,30 @@ topMenuEl.classList = 'flex-around';
 
 //Part Three: Adding Menu Buttons
 // Menu data structure
+// var menuLinks = [
+//     { text: 'about', href: '/about' },
+//     { text: 'catalog', href: '/catalog' },
+//     { text: 'orders', href: '/orders' },
+//     { text: 'account', href: '/account' },
+//   ];
+
+//updated menu data structure from DomLab Part Two
 var menuLinks = [
-    { text: 'about', href: '/about' },
-    { text: 'catalog', href: '/catalog' },
-    { text: 'orders', href: '/orders' },
-    { text: 'account', href: '/account' },
+    {text: 'about', href: '/about'},
+    {text: 'catalog', href: '#', subLinks: [
+      {text: 'all', href: '/catalog/all'},
+      {text: 'top selling', href: '/catalog/top'},
+      {text: 'search', href: '/catalog/search'},
+    ]},
+    {text: 'orders', href: '#' , subLinks: [
+      {text: 'new', href: '/orders/new'},
+      {text: 'pending', href: '/orders/pending'},
+      {text: 'history', href: '/orders/history'},
+    ]},
+    {text: 'account', href: '#', subLinks: [
+      {text: 'profile', href: '/account/profile'},
+      {text: 'sign out', href: '/account/signout'},
+    ]},
   ];
 
   //Iterate over the entire menuLinks array and for each "link" object
@@ -77,3 +96,9 @@ subMenuEl.style.position = 'absolute';
 
 //Set the CSS top property of subMenuEl to the value of 0.
 subMenuEl.style.top = "0";
+
+//Part Four: Adding Menu Interaction
+
+  //Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
+const topMenuLinks = topMenuEl.querySelectorAll('a');
+console.log(topMenuLinks);
