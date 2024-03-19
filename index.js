@@ -132,6 +132,6 @@ topMenuLinks.forEach(links => {
     let findData = menuLinks.find(function (element) {
       return element === 'subLinks';
     });
-    console.log(findData);
+    console.log(findData); // runs undefined, how to form if else to pull correct information
 });
 
