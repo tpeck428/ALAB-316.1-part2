@@ -125,5 +125,13 @@ topMenuLinks.forEach(links => {
         links.classList.remove('active');
     }
 })
+//Part Five: Adding SubMenu Interaction
+    //If the clicked <a> element's "link" object within menuLinks has a subLinks property 
+    //(all do, except for the "link" object for ABOUT), set the CSS top property of subMenuEl to 100%.
+    // let findData = menuLinks.find(function (element)){return element}
+    let findData = menuLinks.find(function (element) {
+      return element === 'subLinks';
+    });
+    console.log(findData);
 });
 
